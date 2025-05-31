@@ -502,9 +502,9 @@ QProgressBar::chunk {
         title_left_widget.setLayout(title_left_layout)
 
         # 右侧按钮
-        btn_min = HoverIconButton("最小化.png", "./最小化-蓝色.png", QSize(25, 25))
-        btn_max = HoverIconButton("最大化.png", "./最大化-蓝色.png", QSize(25, 25))
-        btn_close = HoverIconButton("关闭.png", "./关闭-蓝色.png", QSize(25, 25))
+        btn_min = HoverIconButton("./最小化.png", "./最小化-蓝色.png", QSize(25, 25))
+        btn_max = HoverIconButton("./最大化.png", "./最大化-蓝色.png", QSize(25, 25))
+        btn_close = HoverIconButton("./关闭.png", "./关闭-蓝色.png", QSize(25, 25))
 
         # 添加到主标题栏
         title_layout.addWidget(title_left_widget)
