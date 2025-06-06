@@ -62,7 +62,7 @@ def scrape_sight_data(max_pages=10, signals=None):
         url = f"https://you.ctrip.com/sightlist/china110000/s0-p{page}.html"
         try:
             driver.get(url)
-            time.sleep(random.uniform(0.5, 1.5))
+            time.sleep(random.uniform(0.1, 0.5))
         except Exception as e:
             if signals:
                 signals.message.emit(f"⚠️ 第{page}页加载失败: {e}")
@@ -116,7 +116,7 @@ class MplCanvas(FigureCanvas):
 class SightGUI(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("中国景点数据采集与分析")
+        self.setWindowTitle("景点数据采集-小帅")
         self.setWindowIcon(QIcon())
         self.resize(1100, 700)
         self.df_raw = None
