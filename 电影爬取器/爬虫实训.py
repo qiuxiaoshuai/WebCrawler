@@ -51,7 +51,7 @@ def scrape_sight_data(max_pages=10):
         url = f"https://you.ctrip.com/sightlist/china110000/s0-p{page}.html"
         try:
             driver.get(url)
-            time.sleep(random.uniform(0.5, 1.5))  # 模拟反爬机制延迟
+            time.sleep(random.uniform(0.1, 0.5))  # 模拟反爬机制延迟
         except Exception as e:
             print(f"⚠️ 第 {page} 页加载失败: {e}")
             break
